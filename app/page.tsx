@@ -7,6 +7,8 @@ import {
   Text
 } from "@tremor/react"
 
+import CityPicker from "@/components/CityPicker/CityPicker"
+
 export default function Home() {
   return (
     <div
@@ -31,7 +33,7 @@ export default function Home() {
         <Card
           className="bg-gradient-to-br from-[#be185d] to-[#9d174d] text-white rounded-2xl"
         >
-          <p>City Picker</p>
+          <CityPicker />
         </Card>
       </Card>
     </div>
