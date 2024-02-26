@@ -1,5 +1,19 @@
-export default function WeatherPage() {
+type Props = {
+  params: {
+    city: string
+    lat: string
+    long: string
+  }
+}
+
+export default function WeatherPage({
+  params: {
+    city,
+    lat,
+    long
+  }
+}: Props) {
   return (
-    <p>test</p>
+    <p>Welcome to the weather page: {city} {lat} {long}</p>
   )
 }
