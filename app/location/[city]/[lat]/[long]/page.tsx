@@ -2,6 +2,7 @@ import { getClient } from "@/apollo-client"
 
 import CalloutCard from "@/components/CalloutCard/CalloutCard"
 import InformationPanel from "@/components/InformationPanel/InformationPanel"
+import RainChart from "@/components/RainChart/RainChart"
 import StatCard from "@/components/StatCard/StatCard"
 import TempChart from "@/components/TempChart/TempChart"
 
@@ -102,6 +103,9 @@ export default async function WeatherPage({
         <hr className="mb-5" />
         <div className="space-y-3">
           <TempChart
+            results={results}
+          />
+          <RainChart
             results={results}
           />
         </div>
