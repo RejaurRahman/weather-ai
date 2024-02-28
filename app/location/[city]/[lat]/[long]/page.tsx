@@ -1,6 +1,7 @@
 import { getClient } from "@/apollo-client"
 
 import CalloutCard from "@/components/CalloutCard/CalloutCard"
+import StatCard from "@/components/StatCard/StatCard"
 
 import fetchWeatherQuery from "@/graphql/queries/fetchWeatherQueries"
 
@@ -47,12 +48,50 @@ export default async function WeatherPage({
               ({results.timezone})
             </p>
           </div>
-          <div>
+          <div className="m-2 mb-10">
             <CalloutCard 
               message="This is where GPT-4 Summary will go!"
             />
           </div>
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 m-2">
+            <StatCard 
+              color="yellow"
+              metric={`${results.daily.temperature_2m_max[0].toFixed(1)}&deg;`}
+              title="Maximum Temperature"
+            />
+            <StatCard 
+              color="green"
+              metric={`${results.daily.temperature_2m_min[0].toFixed(1)}&deg;`}
+              title="Minimum Temperature"
+            />
+            <>
+              <StatCard 
+                color="rose"
+                metric={results.daily.uv_index_max[0].toFixed(1)}
+                title="UV Index"
+              />
+              {Number(results.daily.uv_index_max[0].toFixed(1)) > 5 && (
+                <CalloutCard 
+                  message="The UV is high today, be sure to wear SPF!"
+                  warning
+                />
+              )}
+            </>
+            <div className="flex space-x-3">
+              <StatCard 
+                color="cyan"
+                metric={`${results.current_weather.windspeed.toFixed(1)}m/s`}
+                title="Wind Speed"
+              />
+              <StatCard 
+                color="violet"
+                metric={`${results.current_weather.winddirection.toFixed(1)}&deg;`}
+                title="Wind Direction"
+              />
+            </div>
+          </div>
         </div>
+        <hr className="mb-5" />
       </div>
     </div>
   )
