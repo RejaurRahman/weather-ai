@@ -9,6 +9,8 @@ import TempChart from "@/components/TempChart/TempChart"
 
 import fetchWeatherQuery from "@/graphql/queries/fetchWeatherQueries"
 
+export const revalidate = 60
+
 type Props = {
   params: {
     city: string
