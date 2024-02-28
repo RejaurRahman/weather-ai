@@ -77,7 +77,7 @@ export default function InformationPanel({
         </div>
       </div>
       <div className="space-y-2 py-5">
-        <div className="flex items-center space-x-2 px-4 py-3 border border-[#be185d] rounded-md bg-[#9d174d]">
+        <div className="flex items-center space-x-2 px-4 py-3 border border-[#cb467d] rounded-md bg-[#d8749d]">
           <SunIcon
             className="h-10 w-10 text-gray-400"
           />
@@ -94,7 +94,7 @@ export default function InformationPanel({
             </p>
           </div>
         </div>
-        <div className="flex items-center space-x-2 px-4 py-3 border border-[#be185d] rounded-md bg-[#9d174d]">
+        <div className="flex items-center space-x-2 px-4 py-3 border border-[#cb467d] rounded-md bg-[#d8749d]">
           <MoonIcon
             className="h-10 w-10 text-gray-400"
           />
