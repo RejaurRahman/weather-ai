@@ -1,6 +1,7 @@
 import { getClient } from "@/apollo-client"
 
 import CalloutCard from "@/components/CalloutCard/CalloutCard"
+import HumidityChart from "@/components/HumidityChart/HumidityChart"
 import InformationPanel from "@/components/InformationPanel/InformationPanel"
 import RainChart from "@/components/RainChart/RainChart"
 import StatCard from "@/components/StatCard/StatCard"
@@ -106,6 +107,9 @@ export default async function WeatherPage({
             results={results}
           />
           <RainChart
+            results={results}
+          />
+          <HumidityChart
             results={results}
           />
         </div>
