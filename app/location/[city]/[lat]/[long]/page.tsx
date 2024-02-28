@@ -3,6 +3,7 @@ import { getClient } from "@/apollo-client"
 import CalloutCard from "@/components/CalloutCard/CalloutCard"
 import InformationPanel from "@/components/InformationPanel/InformationPanel"
 import StatCard from "@/components/StatCard/StatCard"
+import TempChart from "@/components/TempChart/TempChart"
 
 import fetchWeatherQuery from "@/graphql/queries/fetchWeatherQueries"
 
@@ -99,6 +100,11 @@ export default async function WeatherPage({
           </div>
         </div>
         <hr className="mb-5" />
+        <div className="space-y-3">
+          <TempChart
+            results={results}
+          />
+        </div>
       </div>
     </div>
   )
