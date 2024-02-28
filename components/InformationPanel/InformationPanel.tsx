@@ -6,6 +6,7 @@ import {
   MoonIcon,
   SunIcon
 } from "@heroicons/react/24/solid"
+import weatherCodeToString from "@/lib/weatherCodeToString"
 
 type Props = {
   city: string
@@ -64,6 +65,9 @@ export default function InformationPanel({
           <div>
             <p>
               {results.current_weather.temperature.toFixed(1)}&deg;C
+            </p>
+            <p>
+              {weatherCodeToString[results.current_weather.weathercode].label}
             </p>
           </div>
         </div>
