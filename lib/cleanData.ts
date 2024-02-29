@@ -46,3 +46,5 @@ const cleanData = (data: Root, city: string) => {
     timezone_abbreviation
   }
 }
+
+export default cleanData
