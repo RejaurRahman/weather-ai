@@ -17,7 +17,7 @@ export async function POST(request: Request) {
         `
       }
     ],
-    model: "gpt-4",
+    model: "gpt-3.5-turbo",
     n: 1,
     stream: false,
     temperature: 0.8
