@@ -59,7 +59,7 @@ export default async function WeatherPage({
   const { content } = GPTdata
 
   return (
-    <div className="flex flex-col min-h-screen md:flex-row">
+    <div className="flex flex-col min-h-screen lg:flex-row">
       <InformationPanel 
         city={city}
         lat={lat}
@@ -67,10 +67,10 @@ export default async function WeatherPage({
         results={results}
       />
       <div className="flex-1 p-5 lg:p-10">
-        <div className="p-5">
+        <div className="pb-5">
           <div className="pb-5">
             <h2 className="text-xl font-bold">
-              Today&nbsp;s Overview
+              Today&apos;s Overview
             </h2>
             <p className="text-sm text-gray-400">
               Last Updated at: {" "}
@@ -78,12 +78,12 @@ export default async function WeatherPage({
               ({results.timezone})
             </p>
           </div>
-          <div className="m-2 mb-10">
+          <div className="mb-10">
             <CalloutCard 
               message={content}
             />
           </div>
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 m-2">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
             <StatCard 
               color="yellow"
               metric={`${results.daily.temperature_2m_max[0].toFixed(1)}&deg;`}
@@ -94,7 +94,7 @@ export default async function WeatherPage({
               metric={`${results.daily.temperature_2m_min[0].toFixed(1)}&deg;`}
               title="Minimum Temperature"
             />
-            <>
+            <div className="flex flex-col">
               <StatCard 
                 color="rose"
                 metric={results.daily.uv_index_max[0].toFixed(1)}
@@ -106,7 +106,7 @@ export default async function WeatherPage({
                   warning
                 />
               )}
-            </>
+            </div>
             <div className="flex space-x-3">
               <StatCard 
                 color="cyan"

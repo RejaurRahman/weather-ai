@@ -7,10 +7,10 @@ export default function Loading() {
         className="h-24 w-24 animate-bounce text-yellow-500"
         color="yellow"
       />
-      <h1 className="text-6xl font-bold text-center mb-10 animate-pulse">
+      <h1 className="text-6xl font-bold text-center mb-10 animate-pulse text-white">
         Loading City Weather Information
       </h1>
-      <h2 className="text-xl font-bold text-center mb-10 animate-pulse">
+      <h2 className="text-xl font-bold text-center mb-10 animate-pulse text-white">
         Hold on, we are crunching the numbers & generating an AI summary of the weather!
       </h2>
     </div>

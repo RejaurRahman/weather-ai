@@ -24,7 +24,9 @@ export default function StatCard({
       decorationColor={color}
     >
       <Text>{title}</Text>
-      <Metric>{metric}</Metric>
+      <Metric
+        dangerouslySetInnerHTML={{ __html: metric }}
+      />
     </Card>
   )
 }
