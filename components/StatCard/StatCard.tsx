@@ -1,14 +1,13 @@
 "use client"
 
 import { 
-  Card, 
-  Color,
+  Card,
   Metric, 
   Text 
 } from "@tremor/react"
 
 type Props = {
-  color?: Color
+  color?: string
   metric: string
   title: string
 }

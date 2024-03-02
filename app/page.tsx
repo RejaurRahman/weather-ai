@@ -28,7 +28,7 @@ export default function Home() {
           Powered by OpenAI
         </Subtitle>
         <Divider
-          className="my-10 bg-cab-sarv"
+          className="my-10 bg-cab_sarv"
         />
         <Card
           className="bg-gradient-to-br from-[#be185d] to-[#9d174d] text-white rounded-2xl"

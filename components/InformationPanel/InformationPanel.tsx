@@ -27,7 +27,7 @@ export default function InformationPanel({
         <h1 className="text-6xl font-bold">
           {decodeURI(city)}
         </h1>
-        <p className="text-xs text-gray-400">
+        <p className="text-xs text-white">
           Long/Lat: {long}, {lat}
         </p>
       </div>
@@ -77,7 +77,7 @@ export default function InformationPanel({
       <div className="space-y-2 py-5">
         <div className="flex flex-col sm:flex-row lg:flex-col items-center space-x-2 px-4 py-3 border border-[#cb467d] rounded-md bg-[#d8749d]">
           <SunIcon
-            className="h-10 w-10 text-gray-400"
+            className="h-10 w-10 text-white"
           />
           <div className="flex-1 flex flex-col sm:flex-row lg:flex-col justify-between items-center">
             <p className="font-extralight">Sunrise</p>
@@ -94,7 +94,7 @@ export default function InformationPanel({
         </div>
         <div className="flex flex-col sm:flex-row lg:flex-col items-center space-x-2 px-4 py-3 border border-[#cb467d] rounded-md bg-[#d8749d]">
           <MoonIcon
-            className="h-10 w-10 text-gray-400"
+            className="h-10 w-10 text-white"
           />
           <div className="flex-1 flex flex-col sm:flex-row lg:flex-col justify-between items-center">
             <p className="font-extralight">Sunset</p>

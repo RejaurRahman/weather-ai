@@ -5,7 +5,7 @@ export async function POST(request: Request) {
   const { weatherData } = await request.json()
 
   try {
-    const response = await openai.createChatCompletion({
+    const response = await openai.chat.completions.create({
       messages: [
         {
           role: "system",
@@ -24,9 +24,7 @@ export async function POST(request: Request) {
       temperature: 0.8
     })
 
-    const { data } = response
-
-    return NextResponse.json(data.choices[0].message)
+    return NextResponse.json(response.choices[0].message)
   } catch (error: any) {
     return NextResponse.json({ error: error.message })
   }
