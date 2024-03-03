@@ -17,11 +17,11 @@ export default function Home() {
       <Card
         className="bg-white max-w-4xl mx-auto rounded-lg"
       >
-        <Text
+        <h1
           className="text-6xl font-bold text-center mb-10"
         >
           Weather AI
-        </Text>
+        </h1>
         <Subtitle
           className="text-xl text-center"
         >
